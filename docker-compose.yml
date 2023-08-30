@@ -44,8 +44,8 @@ services:
     - 3000:3000
     restart: unless-stopped
     volumes:
-    - D:/Docker/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
-    - D:/Docker/grafana/grafana:/var/lib/grafana
+    - ./datasources:/etc/grafana/provisioning/datasources
+    - ./grafana:/var/lib/grafana
     networks:
     - monitoring
 networks:
