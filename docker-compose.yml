@@ -25,8 +25,8 @@ services:
     container_name: prometheus
     restart: unless-stopped
     volumes:
-    - D:/Docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-    - D:/Docker/prometheus:/prometheus
+    - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    - ./Docker/prometheus:/prometheus
     command:
     - ' — config.file=/etc/prometheus/prometheus.yml'
     - ' — storage.tsdb.path=/prometheus'
@@ -50,4 +50,4 @@ services:
     - monitoring
 networks:
   monitoring:
-    driver: bridge
+    external: true
