@@ -10,10 +10,9 @@ scrape_configs:
   - job_name: "prometheus"
     static_configs:
       - targets: ["prometheus:9090"]
-  - job_name: "Taco"
+  - job_name: "Taco-server"
     static_configs:
-      - targets: 
-        - taco.shomamamama.com:443
+      - targets: ["taco:80"]
 
   - job_name: "node-exporter"
     static_configs:
