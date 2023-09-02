@@ -20,8 +20,6 @@ scrape_configs:
       - source_labels: [__address__]
         regex: ".*:9100"
         action: drop
-remote_write:
-  - url: "https://taco.shomamamama.com"
 
 alerting:
   alertmanagers:
